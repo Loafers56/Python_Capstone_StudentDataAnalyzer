@@ -2,6 +2,7 @@
 ## Overview
 This program analyzes data about students which can be input
 You can check the average, highest score, lowest score, letter grades, and the average letter grade
+Create histograms, add student info, and save info to file
 ## Features
 This program contains functions that finds the average,
 highest score, lowest score, converts scores to letter grades,
