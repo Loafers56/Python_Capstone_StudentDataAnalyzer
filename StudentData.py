@@ -5,82 +5,12 @@
 # # This program allows the user to input student data
 # # It stores the students as objects and is able to keep track of their grade
 
-# In[1]:
 
 
 # Import libraries
 import matplotlib.pyplot as plt
 import numpy as np
-
-
-# In[2]:
-
-
-class Student:
-    def __init__(self, name, grades, grade_level):
-        self.name = name
-        self.grades = grades
-        self.grade_level = grade_level
-    
-    # Finds the average of the grades
-    def average(self):
-        return sum(self.grades)/len(self.grades)
-    
-    # Finds the highest grade 
-    def highest_score(self):
-        high = max(self.grades)
-        return high
-    
-    # Finds the lowest grade
-    def lowest_score(self):
-        low = min(self.grades)
-        return low
-    
-    # Converts the grades into letter grades and puts them into a list
-    def number_to_letter(self):
-        grades = self.grades
-        letter_grades = []
-        for grade in grades:
-            if grade >= 90:
-                letter_grades.append("A")
-            elif grade >= 80:
-                letter_grades.append("B")
-            elif grade >= 70:
-                letter_grades.append("C")
-            else:
-                letter_grades.append("F")
-        return letter_grades
-    
-    # Returns the average as a letter grade
-    def average_letter(self):
-        average = self.average()
-        letter = []
-        letter.append(average)
-        for i in letter:
-            if i >= 90:
-                return "A"
-            elif i >= 80:
-                return "B"
-            elif i >= 70:
-                return "C"
-            else:
-                return "F"
-    
-    # Shows all of a students data
-    def show_data(self):
-        data = (
-        f"Student: {self.name}\n"
-        f"Grade level: {self.grade_level}\n"
-        f"Grades: {self.grades}\n"
-        f"Average: {self.average()}\n"
-        f"Highest grade: {self.highest_score()}\n"
-        f"Lowest grade: {self.lowest_score()}\n"
-        f"Letter grades: {self.number_to_letter()}\n"
-        )
-        return data
-
-
-# In[3]:
+from student_class import Student
 
 
 # Asks for student information
@@ -123,8 +53,6 @@ def student_info():
     
     return student_data
 
-
-# In[4]:
 
 
 # Puts the averages of all student into a list
@@ -169,7 +97,8 @@ def count_average_letter(letters):
         letters.count("C"),
         letters.count("F")
     ]
-#
+
+# Summarizes data and prepares it for a histogram
 def histo_data(students):
     # Calculates the data needed for the histogram
     average = average_list(students)
@@ -184,8 +113,6 @@ def histo_data(students):
     }
     return average, letter_list, grades, average_grade_level
 
-
-# In[5]:
 
 
 # Creates a pie chart using the data from histo_data()
@@ -210,9 +137,6 @@ def bar_chart(averages):
     ax.set_title('Averages of different grade levels')
     plt.savefig('bar_chart.png')
     plt.show()
-
-
-# In[12]:
 
 
 # Asks the user if they want a histogram
@@ -284,8 +208,6 @@ def save_to_file(students):
             print("Invalid Choice")
 
 
-# In[13]:
-
 
 def main():
     students = student_info()
@@ -323,13 +245,8 @@ def main():
             print("Invalid Choice")           
 
 
-# In[10]:
-
-
 main()
 
-
-# In[ ]:
 
 
 
