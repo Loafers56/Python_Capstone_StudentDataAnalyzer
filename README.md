@@ -4,7 +4,7 @@ You can check the average, highest score, lowest score, letter grades, and the a
 Create histograms, add student info, and save info to file
 ## Files
 - student_class.py - Student class
-- StudentData.py - main script to run
+- student_data_analyzer.py - main script to run
 ## Concepts Demonstrated 
 - Classes and objects
 - Visualization
