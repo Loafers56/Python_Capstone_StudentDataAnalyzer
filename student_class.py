@@ -1,8 +1,9 @@
-class Student(StudentBase):
+class Student:
     def __init__(self, name, grades, grade_level):
-        super().__init__(name)
+        self.name = name
         self.grades = grades
         self.grade_level = grade_level
+    
     # Finds the average of the grades
     def average(self):
         return sum(self.grades)/len(self.grades)
