@@ -10,5 +10,8 @@ Create histograms, add student info, and save info to file
 - Visualization
 - File input / output
 - Data analysis
+## Enchancements
+- Pandas dataframe
+- plotly line chart
 ## Author
-Noah
+Noah Scott
